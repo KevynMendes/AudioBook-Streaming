@@ -214,4 +214,12 @@ selectCapitulo.addEventListener("change", function() {
     tocarFaixa();
 });
 
+function selectBook(bookId) {
+    // Armazene o livro selecionado para uso posterior
+    localStorage.setItem('selectedBook', bookId);
+    // Redirecione para a página do audiobook
+    window.location.href = 'audiobook.html';
+}
+
+
 

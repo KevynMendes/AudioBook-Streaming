@@ -1,0 +1,41 @@
+body{
+    background: #dcdcdc;
+    font-family:'verdana';
+    color: #000;
+}
+
+.book-selection-screen {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.book-selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 5rem;
+
+
+}
+
+.book-cover {
+    cursor: pointer;
+    transition: ease 2s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.book-cover img {
+width: 16rem;
+}
+p{
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+    background: #000;
+    color: #fff;
+    padding: 0.2rem;
+
+}
+
+
