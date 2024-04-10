@@ -3,54 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÁudioBook - Dom Casmurro</title>
+    <title>ÁudioBook Streaming</title>
     <link rel="shortcut icon" type="image/jpg" href="src/images/icon-pagina.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
 </head>
-
-
-<nav class="menu">
-     <h1 id="txtH1">Escolha o Capítulo</h1>
-        <select id="selectCapitulo"></select>
-</nav>
-
 <body>
     
-    <h1 id="titleNotas">Notas</h1><textarea id="notas" placeholder="Digite suas notas aqui..." rows="10" cols="50"></textarea>
-    
-        <div class="music-container">
-            <h4 id="audio-name"></h4>
-            <img id="cover" src="./src/images/dom-casmurro.jpeg" alt="Capa do Livro">
-            <audio id="audio-capitulo" src="./src/books/dom-casmurro/1.mp3"></audio>
-            <div id="below-cover" class="full-width">
-            <div id="track-info">
-        <div id="capitulo">Capítulo 1</div>
-        <div id="nome-autor">Machado de Assis</div>
-    </div>        
-</div>
-    <div>
-         <p><span id="currentTime">0:00</span></p>
-            <p><span id="remainingTime">0</span></p> 
-                <input type="range" id="progressSlider" min="0" max="100" step="0.01" value="0">
-    
-      <input id="volumeControl" class="volume-slider" type="range" min="0" max="1" step="0.01" value="0.5" onchange="adjustVolume(this.value)">
-      
-                <i id="vol" class="bi bi-volume-up-fill" style="cursor: pointer;" onclick="toggleMute()"></i>
-</div>
-    
-        
-    <div id="button-conteiner" class="full-width">
-        <button id="anterior" class="bi bi-arrow-left-circle"></button>
-        <button id="play-pause" class="bi bi-play-circle"></button>
-        <button id="proximo" class="bi bi-arrow-right-circle"></button>
-        <button id="voltar15" class="bi bi-arrow-counterclockwise">15s</button>
-        <button id="avancar15" class="bi bi-arrow-clockwise">15s</button>
-    </div>
-    
+    <div class="book-selection-screen">
+        <h1>Escolha um Livro</h1>
 
+            <div class="book-selection">        
+                <div class="book-cover" onclick="selectBook('a-noite-na-taverna')">
+                    <img src="src/images/anoitenataverna.jpg" alt="A Noite na Taverna">
+                        <p>A Noite na Taverna</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('a-reliquia')">
+                    <img src="src/images/a-reliquia.jpg" alt="A Relíquia">
+                        <p>A Relíquia</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('contos-do-norte')">
+                    <img src="src/images/contos-do-norte.jpg" alt="Contos do Norte">
+                        <p>Contos do Norte</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('dom-casmurro')">
+                    <img src="src/images/dom-casmurro.jpg" alt="Dom Casmurro">
+                        <p>Dom Casmurro</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('memorias-postumas-de-bras-cubas')">
+                    <img src="src/images/memorias-postumas-de-bras-cubas.jpg" alt="Memórias Póstumas de Brás Cubas">
+                        <p>Memórias Póstumas</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('o-cortico')">
+                    <img src="src/images/o-cortico.jpg" alt="O Cortiço">
+                        <p>O Cortiço</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('o-mandarim')">
+                    <img src="src/images/o-mandarim.jpg" alt="O Mandarim">
+                        <p>O Mandarim</p>
+                            </div>
+                <div class="book-cover" onclick="selectBook('paginas-recolhidas')">
+                    <img src="src/images/paginas-recolhidas.jpg" alt="Páginas Recolhidas">
+                        <p>Páginas Recolhidas</p>
+                            </div>
+                                </div>
+                                    </div>
+
+            <div class="book-info-modal" id="bookInfoModal">
+                <div class="book-info-content">
+                    <span class="close" onclick="hideBookInfoModal()">&times;</span>
+                        <h2 id="bookTitle"></h2>
+                            <img id="bookImage" src="" alt="">
+                                <p id="bookAuthor"></p>
+                                    <p id="bookGenre"></p>
+                                        <p id="bookDescription"></p>
+                                            <a id="redirectLink" href="#">Acessar - ÁudioBook</a>
+                                                <p id="bookCapitulos"></p>
+                                                    </div>
+                                                        </div>
 <script src="script.js"></script>
 </body>
-
 </html>

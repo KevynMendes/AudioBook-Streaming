@@ -11,6 +11,16 @@
     align-items: center;
     background-color: #121212;
   }
+
+  #back{
+    width: 20rem;
+    margin-top: -1rem;
+    margin-bottom: -2rem;
+    padding: 1rem;
+    background-color: #dcdcdc;
+    color: #000;
+    cursor: pointer;
+  }
   
   #cover{
     border-radius: 1rem;
@@ -36,7 +46,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      
     }
   
   button {
@@ -239,7 +248,6 @@
       &:hover {
        transform: scale(1.06 );
       }
-    
   }
   
   #txtH1{
@@ -251,26 +259,98 @@
     color: #dcdcdc;
   }
   
-  /*media queries*/
+    /*Media Queries*/
+    @media screen and (max-width: 768px) {
   
-  @media screen and (max-width: 768px) {
-    #cover {
-      width: 90vw;
-    }
+      #cover {
+        margin-top: 0;
+        width: 90vw;
+        max-width: 100%;
+      }
+    
+      #back {
+        position: relative;
+        top: -6.4rem;
+        right: 8.9rem;
+        width: 4rem;
+        height: 1rem;
+        font-size: 0.5rem;
+      }
+    
+      #track-info {
+        font-size: 5vw;
+        height: 15vh;
+      }
+    
+      #notas,
+      #titleNotas,
+      #vol,
+      #volumeControl,
+      #avancar15,
+      #voltar15{
+        display: none;
+      }
+    
+      #txtH1 {
+        font-size: 1rem;
+        position: relative;
+        top: -1rem;
+        left: 9rem;
+      }
+    
+      #selectCapitulo {
+        position: relative;
+        top: -1rem;
+        left: 5rem;
+      }
   
-    #track-info {
-      font-size: 5vw;
-      height: 15vh;
+      #currentTime{
+        background-color: transparent;
+        border-radius: 1rem; border: none;
+        color: #fff;
+        position:relative; 
+        left: 0.9em;
+        bottom: 1.6rem;
+        font-size: 1rem;
+        font-family: 'Segoe UI';
+      }
+      
+      #remainingTime{
+        background-color: transparent;
+        border-radius: 1rem; border: none;
+        color: #fff;
+        position:relative; 
+        left:19.6rem;
+        bottom: 3.6rem;
+        font-size: 1rem;
+        font-family: 'Segoe UI';
+      }
+      
+      #progressSlider {
+      width: 16rem;
+      margin-right: 8rem;}
+    
+      #play-pause {
+        font-size: 5rem;
+        position: relative;
+        left: 0.2rem;
+        bottom: 6rem;
+        transition: transform 0.3s ease;
+        &:hover {
+         background-color: transparent;
+         transform: scale(1.1 );
+        }
     }
-  }
-  
-  @media screen and (max-width: 480px) {
-    #cover {
-      width: 95vw;
+    
+    #anterior, #proximo {
+        font-size: 4rem;
+        position: relative;
+        left: 0.2rem;
+        bottom: 6rem;
+        transition: transform 0.3s ease;
+        &:hover {
+         background-color: transparent;
+         transform: scale(1.1 );
+        }
+      }
     }
-  
-    #track-info {
-      font-size: 7vw;
-      height: 20vh;
-    }
-  }

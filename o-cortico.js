@@ -213,3 +213,7 @@ selectCapitulo.addEventListener("change", function() {
     nomeCapitulo.innerText = "Capítulo " + capitulo;
     tocarFaixa();
 });
+
+function goBack() {
+    window.history.back();
+}

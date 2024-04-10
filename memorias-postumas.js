@@ -2,7 +2,7 @@ const audioCapitulo = document.getElementById("audio-capitulo");
 const botaoPlayPause = document.getElementById("play-pause");
 const botaoProximoCapitulo = document.getElementById("proximo");
 const botaoCapituloAnterior = document.getElementById("anterior");
-const quantidadeCapitulos = 10;
+const quantidadeCapitulos = 32;
 const nomeCapitulo = document.getElementById("capitulo");
 let taTocando = false;
 let capitulo = 1;
@@ -41,8 +41,8 @@ function proximoCapitulo() {
         capitulo = 1;
     }
 
-    audioCapitulo.src = "./src/books/dom-casmurro/" + capitulo + ".mp3";
-    nomeCapitulo.innerText = "Capítulo " + capitulo;
+    audioCapitulo.src = "./src/books/memorias-postumas/" + capitulo + ".mp3";
+    nomeCapitulo.innerText = "Sessão " + capitulo;
     tocarFaixa();
 }
 
@@ -53,8 +53,8 @@ function capituloAnterior() {
         capitulo -= 1;
     }
 
-    audioCapitulo.src = "./src/books/dom-casmurro/" + capitulo + ".mp3";
-    nomeCapitulo.innerText = "Capítulo " + capitulo;
+    audioCapitulo.src = "src/books/memorias-postumas/" + capitulo + ".mp3";
+    nomeCapitulo.innerText = "Sessão " + capitulo;
     tocarFaixa();
 }
 
@@ -203,14 +203,14 @@ const selectCapitulo = document.getElementById("selectCapitulo");
 for (let i = 1; i <= quantidadeCapitulos; i++) {
     const option = document.createElement("option");
     option.value = i;
-    option.textContent = "Capítulo " + i;
+    option.textContent = "Sessão " + i;
     selectCapitulo.appendChild(option);
 }
 
 selectCapitulo.addEventListener("change", function() {
     capitulo = parseInt(selectCapitulo.value);
-    audioCapitulo.src = `./src/books/dom-casmurro/${capitulo}.mp3`;
-    nomeCapitulo.innerText = "Capítulo " + capitulo;
+    audioCapitulo.src = `./src/books/memorias-postumas/${capitulo}.mp3`;
+    nomeCapitulo.innerText = "Sessão " + capitulo;
     tocarFaixa();
 });
 

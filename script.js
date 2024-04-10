@@ -215,11 +215,103 @@ selectCapitulo.addEventListener("change", function() {
 });
 
 function selectBook(bookId) {
-    // Armazene o livro selecionado para uso posterior
     localStorage.setItem('selectedBook', bookId);
-    // Redirecione para a página do audiobook
     window.location.href = 'audiobook.html';
 }
 
+
+function selectBook(bookId) {
+    let bookInfoModal = document.getElementById('bookInfoModal');
+    let bookTitle = document.getElementById('bookTitle');
+    let bookAuthor = document.getElementById('bookAuthor');
+    let bookGenre = document.getElementById('bookGenre');
+    let bookDescription = document.getElementById('bookDescription');
+    let bookCapitulos = document.getElementById('bookCapitulos');
+    let bookImage = document.getElementById('bookImage');
+
+    switch (bookId) {
+        case 'a-noite-na-taverna':
+            bookTitle.textContent = "A Noite na Taverna";
+            bookAuthor.textContent = "Autor: Álvares de Azevedo";
+            bookGenre.textContent = "Genero: Contos";
+            bookCapitulos.textContent = "7 Capítulos"
+            bookDescription.textContent = "A Noite na Taverna é uma coleção de contos escrita por Álvares de Azevedo e publicada postumamente em 1855. A obra é composta por narrativas que exploram temas como amor, morte, traição e os limites da condição humana.";
+            bookImage.src = "src/images/anoitenataverna.jpg";
+            document.getElementById('redirectLink').href = 'a-noite-na-taverna.html';
+            break;
+        case 'a-reliquia':
+            bookTitle.textContent = "A Relíquia";
+            bookAuthor.textContent = "Autor: Eça de Queirós";
+            bookGenre.textContent = "Genero: Romance";
+            bookCapitulos.textContent = "25 Capítulos"
+            bookDescription.textContent = "A Relíquia é um romance de Eça de Queirós, publicado em 1887. A obra narra a história de um jovem que herda uma relíquia religiosa e parte em uma viagem por Portugal em busca de sua identidade e espiritualidade.";
+            bookImage.src = "src/images/a-reliquia.jpg";
+            document.getElementById('redirectLink').href = 'a-noite-na-taverna.html';
+            break;
+        case 'contos-do-norte':
+            bookTitle.textContent = "Contos do Norte";
+            bookAuthor.textContent = "Autor: Marques de Carvalho";
+            bookGenre.textContent = "Genero: Contos de Fadas";
+            bookCapitulos.textContent = "8 Capítulos"
+            bookDescription.textContent = "Contos do Norte é uma coleção de contos ambientados na região norte do Brasil. As histórias são, em geral, curtas e melancólicas, com os elementos da floresta, dos rios amazônicos e das populações ribeirinhas em destaque.";
+            bookImage.src = "src/images/contos-do-norte.jpg";
+            document.getElementById('redirectLink').href = 'a-reliquia.html';
+            break;
+        case 'dom-casmurro':
+            bookTitle.textContent = "Dom Casmurro";
+            bookAuthor.textContent = "Autor: Machado de Assis";
+            bookGenre.textContent = "Genero: Romance";
+            bookCapitulos.textContent = "10 Capítulos"
+            bookDescription.textContent = "Dom Casmurro é um dos romances mais famosos do escritor brasileiro Machado de Assis, publicado originalmente em 1899. A obra narra a história de Bentinho, um jovem atormentado pela dúvida sobre a fidelidade de sua esposa Capitu.";
+            bookImage.src = "src/images/dom-casmurro.jpg";
+            document.getElementById('redirectLink').href = 'dom-casmurro.html';
+            break;
+        case 'memorias-postumas-de-bras-cubas':
+            bookTitle.textContent = "Memórias Póstumas de Brás Cubas";
+            bookAuthor.textContent = "Autor: Machado de Assis";
+            bookGenre.textContent = "Genero: Romance";
+            bookCapitulos.textContent = "32 Capítulos"
+            bookDescription.textContent = "Memórias Póstumas de Brás Cubas é um romance de Machado de Assis, publicado em 1881. Considerado uma das obras-primas da literatura brasileira, o livro é narrado pelo próprio defunto Brás Cubas após sua morte.";
+            bookImage.src = "src/images/memorias-postumas-de-bras-cubas.jpg";
+            document.getElementById('redirectLink').href = 'memorias-postumas.html';
+            break;
+        case 'o-cortico':
+            bookTitle.textContent = "O Cortiço";
+            bookAuthor.textContent = "Autor: Aluísio Azevedo";
+            bookGenre.textContent = "Genero: Romance Naturalista";
+            bookCapitulos.textContent = "23 Capítulos"
+            bookDescription.textContent = "O Cortiço é um romance do escritor brasileiro Aluísio Azevedo, publicado em 1890. A obra retrata a vida em um cortiço no Rio de Janeiro durante o século XIX, explorando temas como a luta de classes, a miscigenação e o determinismo social.";
+            bookImage.src = "src/images/o-cortico.jpg";
+            document.getElementById('redirectLink').href = 'o-cortico.html';
+            break;
+        case 'o-mandarim':
+            bookTitle.textContent = "O Mandarim";
+            bookAuthor.textContent = "Autor: Eça de Queirós";
+            bookGenre.textContent = "Genero: Romance";
+            bookCapitulos.textContent = "8 Capítulos"
+            bookDescription.textContent = "O Mandarim é um romance satírico de Eça de Queirós, publicado em 1880. A obra critica a sociedade portuguesa da época, abordando temas como a corrupção, o fanatismo religioso e a hipocrisia.";
+            bookImage.src = "src/images/o-mandarim.jpg";
+            document.getElementById('redirectLink').href = 'o-mandarim.html';
+            break;
+        case 'paginas-recolhidas':
+            bookTitle.textContent = "Páginas Recolhidas";
+            bookAuthor.textContent = "Autor: Machado de Assis";
+            bookGenre.textContent = "Genero: Contos";
+            bookCapitulos.textContent = "17 Capítulos"
+            bookDescription.textContent = "Páginas Recolhidas é uma coletânea de contos de Machado de Assis, publicada em 1899. Os contos presentes nesta obra exploram uma variedade de temas, desde o cotidiano até questões existenciais.";
+            bookImage.src = "src/images/paginas-recolhidas.jpg";
+            document.getElementById('redirectLink').href = 'paginas-recolidas.html';
+            break;
+        default:
+            console.error('Livro não encontrado.');
+            return;
+    }
+
+    bookInfoModal.style.display = 'block';
+}
+
+function hideBookInfoModal() {
+    document.getElementById("bookInfoModal").style.display = "none";
+}
 
 
