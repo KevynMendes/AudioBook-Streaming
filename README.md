@@ -2,6 +2,8 @@
 
 ÁudioBook Streaming é uma plataforma web projetada para oferecer uma experiência de audição de áudiolivros. Com uma interface simples e intuitiva, os usuários podem escolher entre uma variedade de livros e começar a ouvi-los instantaneamente.
 
+![Captura de tela 2024-04-17 152750](https://github.com/KevynMendes/AudioBook-Streaming/assets/156138743/99197a43-3bc8-4807-8d4f-48754d2c3c71)
+
 ## Funcionalidades Principais
 
 - **Seleção de Livros**: A página inicial apresenta uma seleção de livros com suas respectivas capas e títulos. Os usuários podem clicar nas capas dos livros para ver mais informações sobre cada um.
@@ -14,7 +16,7 @@
 - 
 ## Exemplo de Uso
 
-Você pode conferir uma versão de demonstração [aqui]([https://kevynmendes.github.io/Lista-de-Compras/](https://kevynmendes.github.io/AudioBook-Streaming/)).
+Você pode conferir uma versão de demonstração [aqui](https://kevynmendes.github.io/AudioBook-Streaming/).
 
 ## Responsividade para Dispositivos Móveis
 
