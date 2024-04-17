@@ -14,7 +14,7 @@
 - 
 ## Exemplo de Uso
 
-Você pode conferir uma versão de demonstração [aqui](https://kevynmendes.github.io/Lista-de-Compras/).
+Você pode conferir uma versão de demonstração [aqui]([https://kevynmendes.github.io/Lista-de-Compras/](https://kevynmendes.github.io/AudioBook-Streaming/)).
 
 ## Responsividade para Dispositivos Móveis
 
